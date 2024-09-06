@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddSupplier"
+    android:background="@drawable/gradient_bg">
+
+    <include layout="@layout/toolbar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="30dp"
+        android:layout_marginTop="50dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Supplier"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:fontFamily="@font/blinker_semibold"
+            android:layout_gravity="center"
+            android:gravity="center"/>
+
+        <EditText
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Supplier Name"
+            android:background="@color/peachyoren"
+            android:textColor="@color/black"
+            android:layout_marginTop="20dp"
+            android:padding="15dp"
+            android:inputType="textPersonName"
+            android:textSize="15sp"/>
+
+        <EditText
+            android:id="@+id/address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Address"
+            android:background="@color/peachyoren"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:inputType="textPostalAddress"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/contact"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Contact Number"
+            android:background="@color/peachyoren"
+            android:textColor="@color/black"
+            android:padding="15dp"
+            android:inputType="date"
+            android:textSize="15sp"
+            android:layout_marginTop="20dp"/>
+
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/olive"
+            android:textColor="@color/black"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

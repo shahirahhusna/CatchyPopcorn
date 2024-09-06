@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/appicon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.CatchyPopcorn"
+        tools:targetApi="31">
+        <activity
+            android:name=".AddSupplier"
+            android:exported="false" />
+        <activity
+            android:name=".Supplier"
+            android:exported="false"
+            android:label="@string/title_activity_supplier"
+            android:theme="@style/Theme.CatchyPopcorn.NoActionBar" />
+        <activity
+            android:name=".SalesReport"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.example.catchypopcorn"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <activity
+            android:name=".GenerateQR"
+            android:exported="false" />
+        <activity
+            android:name=".NewRawMaterial"
+            android:exported="false" />
+        <activity
+            android:name=".ManagerName"
+            android:exported="false" />
+        <activity
+            android:name=".CrewName"
+            android:exported="false" />
+        <activity
+            android:name=".CalculateOrder"
+            android:exported="false" />
+        <activity
+            android:name=".ManagerScanQR"
+            android:exported="false" />
+        <activity
+            android:name=".CrewScanQR"
+            android:exported="false" />
+        <activity
+            android:name=".NewProduct"
+            android:exported="false" />
+        <activity
+            android:name=".ManagerRegister"
+            android:exported="false" />
+        <activity
+            android:name=".CrewRegister"
+            android:exported="false" />
+        <activity
+            android:name=".ManagerLogin"
+            android:exported="false" />
+        <activity
+            android:name=".ManagerDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".HelpDesk"
+            android:exported="false" />
+        <activity
+            android:name=".Inventory"
+            android:exported="false" />
+        <activity
+            android:name=".StockOut"
+            android:exported="false" />
+        <activity
+            android:name=".StockIn"
+            android:exported="false" />
+        <activity
+            android:name=".StockProduct"
+            android:exported="false" />
+        <activity
+            android:name=".CrewDashboard"
+            android:exported="false" />
+        <activity
+            android:name=".CrewLogin"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

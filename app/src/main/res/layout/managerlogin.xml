@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManagerLogin"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/gradient_bg">
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:src="@drawable/logo"
+        android:layout_marginTop="55dp"
+        android:layout_marginRight="20dp"/>
+
+    <TextView
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginRight="5dp"
+        android:fontFamily="@font/blinker_semibold"
+        android:text="Catchy Popcorn"
+        android:textAlignment="textEnd"
+        android:textColor="@color/black"
+        android:textSize="20dp"
+        app:layout_constraintRight_toLeftOf="@id/logo"
+        app:layout_constraintTop_toTopOf="parent"
+        android:gravity="end" />
+
+    <LinearLayout
+        android:id="@+id/welcomeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:fontFamily="@font/blinker_bold"
+            android:text="Manager"
+            android:textColor="@color/black"
+            android:textSize="55dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="55dp"
+            android:layout_marginLeft="50dp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/blinker_bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toBottomOf="@id/welcomeLayout"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/manageremail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:passwordToggleEnabled="true">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/managerpassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:inputType="textPassword"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+
+            <CheckBox
+                android:layout_width="50dp"
+                android:layout_height="50dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Remember Me"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bg"
+        android:fontFamily="@font/blinker_bold"
+        android:text="Log In"
+        android:textSize="20dp"
+        app:backgroundTint="#3562C0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/loginLayout" />
+
+    <TextView
+        android:id="@+id/managerReg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/loginBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Register New Manager"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/black"/>
+
+    <TextView
+        android:id="@+id/crewPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/managerReg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Crew Login"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/black"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

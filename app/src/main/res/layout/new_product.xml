@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewProduct"
+    android:fitsSystemWindows="true"
+    android:background="@drawable/back">
+
+    <include layout="@layout/toolbar"/>
+
+    <View
+        android:id="@+id/gradientBg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="150dp"
+        android:background="@drawable/gradient_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <TextView
+        android:id="@+id/newproduct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/blinker_bold"
+        android:gravity="center_horizontal"
+        android:text="New Product"
+        android:textColor="@color/hijaugelap"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@id/gradientBg"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <TextView
+        android:id="@+id/productidentified"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/blinker_semibold"
+        android:gravity="center"
+        android:justificationMode="inter_word"
+        android:text="Product Identified:"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newproduct" />
+
+    <View
+        android:id="@+id/topView"
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productidentified" />
+
+    <TextView
+        android:id="@+id/newProductText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/topView"
+        android:layout_marginTop="40dp"
+        android:textColor="@color/black"
+        android:textSize="20dp"/>
+
+
+    <View
+        android:id="@+id/linebelow"
+        android:layout_width="300dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="160dp"
+        android:background="@color/black"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/productidentified" />
+
+    <Button
+        android:id="@+id/newProductScan"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linebelow"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp"
+        android:text="Scan QR"
+        android:textColor="@color/black"
+        android:backgroundTint="@color/white"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/quantityCard"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="20dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/newProductScan">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="5dp"
+                    android:text="Stock In:" />
+
+                <EditText
+                    android:id="@+id/quantityEditText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="enter quantity"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/newProductBtn"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/quantityCard"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="50dp"
+        android:text="Submit New Product"
+        android:textColor="@color/black"
+        android:padding="20dp"
+        android:backgroundTint="@color/white"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

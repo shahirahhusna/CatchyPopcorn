@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "85442276124",
+    "project_id": "catchypopcorn-53528",
+    "storage_bucket": "catchypopcorn-53528.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85442276124:android:306e28c995d74e3d3fa8d9",
+        "android_client_info": {
+          "package_name": "com.example.catchypopcorn"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC4dCyJh19z4jHcejuodFPD-6yswLhCrOM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
